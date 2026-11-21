@@ -8,7 +8,7 @@ function concept2(cfg){return{cfg,build(){const z=this.start,WT=cfg.wt-z,LT=cfg.
  const letters=spanify(wd,cfg.word);letters.forEach(s=>s.style.opacity=0);
  const oy=222+Math.round(fs*1.08);
  const hl=el('div',`left:78px;top:${oy+30}px;width:${Math.min(cfg.hw||400,520)}px;height:24px;background:${C.yel};transform-origin:left;transform:scaleX(0)`);
- const og=el('div',`left:82px;top:${oy-6}px;white-space:nowrap;opacity:0;color:${C.red2};font-weight:700`,0,`<span style="font-size:44px">${cfg.tr}</span><span style="font-size:36px;color:${C.ink};padding:0 12px">·</span><span style="font-size:42px;font-family:'DejaVu Sans',sans-serif">${cfg.orig}</span>`);
+ const ogs=(cfg.tr.length+cfg.orig.length)>16?0.74:1;const og=el('div',`left:82px;top:${oy-6}px;white-space:nowrap;opacity:0;color:${C.red2};font-weight:700`,0,`<span style="font-size:${44*ogs}px">${cfg.tr}</span><span style="font-size:${36*ogs}px;color:${C.ink};padding:0 12px">·</span><span style="font-size:${42*ogs}px;font-family:'DejaVu Sans',sans-serif">${cfg.orig}</span>`);
  const panel=el('div',`left:80px;top:${oy+80}px;width:530px;height:400px;background:${pc}`);
  const sv=svgBox(`left:155px;top:${oy+90}px;width:380px;height:380px`);const ups=ILL[cfg.ill](sv);
  const ly=oy+505;
